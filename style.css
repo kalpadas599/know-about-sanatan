@@ -1,0 +1,1631 @@
+:root {
+    --saffron: #FF9933;
+    --maroon: #800000;
+    --golden: #FFD700;
+    --peacock-blue: #1A4D8F;
+    --dark-peacock: #0F2A4F;
+    --white: #FFFFFF;
+    --cream: #FFF8E1;
+    --light-saffron: #FFB366;
+    --shadow: rgba(128, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    overflow-x: hidden;
+}
+
+/* CSS Art for Deities */
+.deity-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--golden), var(--saffron));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    animation: divine-glow 3s ease-in-out infinite;
+}
+
+@keyframes divine-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 153, 51, 0.4);
+    }
+}
+
+/* Krishna Avatar */
+.krishna-avatar {
+    background: linear-gradient(135deg, #1E88E5, #0D47A1);
+    position: relative;
+}
+
+.krishna-avatar::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #8D6E63;
+    border-radius: 50%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.krishna-avatar::after {
+    content: '🦚';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+/* Rama Avatar */
+.rama-avatar {
+    background: linear-gradient(135deg, #FF5722, #D84315);
+    position: relative;
+}
+
+.rama-avatar::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #8D6E63;
+    border-radius: 50%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rama-avatar::after {
+    content: '🏹';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Shiva Avatar */
+.shiva-avatar {
+    background: linear-gradient(135deg, #E8EAF6, #9C27B0);
+    position: relative;
+}
+
+.shiva-avatar::before {
+    content: '🌙';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1rem;
+}
+
+.shiva-avatar::after {
+    content: '🔱';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Vishnu Avatar */
+.vishnu-avatar {
+    background: linear-gradient(135deg, #2196F3, #0D47A1);
+    position: relative;
+}
+
+.vishnu-avatar::before {
+    content: '🐚';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+}
+
+.vishnu-avatar::after {
+    content: '🌟';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+/* Durga Avatar */
+.durga-avatar {
+    background: linear-gradient(135deg, #E91E63, #AD1457);
+    position: relative;
+}
+
+.durga-avatar::before {
+    content: '🦁';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+}
+
+.durga-avatar::after {
+    content: '⚔️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Lakshmi Avatar */
+.lakshmi-avatar {
+    background: linear-gradient(135deg, #FFC107, #F57F17);
+    position: relative;
+}
+
+.lakshmi-avatar::after {
+    content: '🪷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+/* Saraswati Avatar */
+.saraswati-avatar {
+    background: linear-gradient(135deg, #FFFFFF, #E8F5E8);
+    position: relative;
+    border: 3px solid var(--golden);
+}
+
+.saraswati-avatar::before {
+    content: '🦢';
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 1.2rem;
+}
+
+.saraswati-avatar::after {
+    content: '📚';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Hanuman Avatar */
+.hanuman-avatar {
+    background: linear-gradient(135deg, #FF6D00, #E65100);
+    position: relative;
+}
+
+.hanuman-avatar::after {
+    content: '⚡';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Ganesha Avatar */
+.ganesha-avatar {
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+    position: relative;
+}
+
+.ganesha-avatar::after {
+    content: '🐘';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+/* Character Images for Epics */
+.character-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ramayana Characters */
+.sita-image {
+    background: linear-gradient(135deg, #E91E63, #FCE4EC);
+}
+
+.sita-image::after {
+    content: '👸';
+    font-size: 2.5rem;
+}
+
+.dasharatha-image {
+    background: linear-gradient(135deg, #795548, #D7CCC8);
+}
+
+.dasharatha-image::after {
+    content: '👑';
+    font-size: 2rem;
+}
+
+.ravana-image {
+    background: linear-gradient(135deg, #212121, #F44336);
+}
+
+.ravana-image::after {
+    content: '😈';
+    font-size: 2.5rem;
+}
+
+.lakshmana-image {
+    background: linear-gradient(135deg, #4CAF50, #C8E6C9);
+}
+
+.lakshmana-image::after {
+    content: '🤴';
+    font-size: 2rem;
+}
+
+/* Mahabharata Characters */
+.yudhishthira-image {
+    background: linear-gradient(135deg, #2196F3, #E3F2FD);
+}
+
+.yudhishthira-image::after {
+    content: '👑';
+    font-size: 2rem;
+}
+
+.bhima-image {
+    background: linear-gradient(135deg, #FF5722, #FFCCBC);
+}
+
+.bhima-image::after {
+    content: '💪';
+    font-size: 2.5rem;
+}
+
+.draupadi-image {
+    background: linear-gradient(135deg, #9C27B0, #F3E5F5);
+}
+
+.draupadi-image::after {
+    content: '👸';
+    font-size: 2.5rem;
+}
+
+.karna-image {
+    background: linear-gradient(135deg, #FF9800, #FFF3E0);
+}
+
+.karna-image::after {
+    content: '⚔️';
+    font-size: 2rem;
+}
+
+.bhishma-image {
+    background: linear-gradient(135deg, #607D8B, #ECEFF1);
+}
+
+.bhishma-image::after {
+    content: '🛡️';
+    font-size: 2rem;
+}
+
+.duryodhana-image {
+    background: linear-gradient(135deg, #424242, #BDBDBD);
+}
+
+.duryodhana-image::after {
+    content: '👑';
+    font-size: 2rem;
+}
+
+/* Cultural Item Images */
+.culture-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Festival Images */
+.diwali-image {
+    background: linear-gradient(135deg, #FFD700, #FF8F00);
+}
+
+.diwali-image::after {
+    content: '🪔';
+}
+
+.holi-image {
+    background: linear-gradient(135deg, #E91E63, #4CAF50, #2196F3);
+}
+
+.holi-image::after {
+    content: '🎨';
+}
+
+.navratri-image {
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+}
+
+.navratri-image::after {
+    content: '💃';
+}
+
+/* Temple Images */
+.temple-image {
+    background: linear-gradient(135deg, #FF6D00, #FFE0B2);
+    position: relative;
+}
+
+.temple-image::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: #8D6E63;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 0 0;
+}
+
+.temple-image::after {
+    content: '🛕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+/* Floating Background Elements */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.floating-diya {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--golden);
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-om {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--saffron);
+    opacity: 0.05;
+    animation: rotate 20s linear infinite;
+}
+
+.floating-lotus {
+    position: absolute;
+    font-size: 1.5rem;
+    color: var(--peacock-blue);
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 20px rgba(128, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--maroon);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo::before {
+    content: "🕉️";
+    font-size: 1.5rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px var(--golden);
+    }
+
+    100% {
+        text-shadow: 0 0 20px var(--golden), 0 0 30px var(--saffron);
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--maroon);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--saffron), var(--golden));
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    color: var(--maroon);
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--saffron) 0%, var(--maroon) 50%, var(--peacock-blue) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10L60 40L90 40L70 60L80 90L50 70L20 90L30 60L10 40L40 40Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>') repeat;
+    opacity: 0.1;
+}
+
+.hero-content {
+    z-index: 2;
+    color: var(--white);
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--golden), var(--light-saffron));
+    color: var(--maroon);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.6s both;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* Rotating Deities */
+.rotating-deities {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+}
+
+.deity-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+}
+
+.deity-icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.deity-icon:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.deity-icon:nth-child(2) {
+    top: 25%;
+    right: 0;
+}
+
+.deity-icon:nth-child(3) {
+    bottom: 25%;
+    right: 0;
+}
+
+.deity-icon:nth-child(4) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.deity-icon:nth-child(5) {
+    bottom: 25%;
+    left: 0;
+}
+
+.deity-icon:nth-child(6) {
+    top: 25%;
+    left: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--maroon);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--saffron), var(--golden));
+    border-radius: 2px;
+}
+
+/* About Section */
+.about {
+    background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: var(--maroon);
+    line-height: 1.8;
+}
+
+.about-visual {
+    position: relative;
+    text-align: center;
+}
+
+.om-symbol {
+    font-size: 8rem;
+    color: var(--peacock-blue);
+    opacity: 0.8;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Avatars Section */
+.avatars {
+    background: linear-gradient(135deg, var(--peacock-blue) 0%, var(--dark-peacock) 100%);
+    color: var(--white);
+}
+
+.avatars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.avatar-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.avatar-card:hover {
+    transform: translateY(-10px) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.avatar-desc {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Epics Section */
+.epics {
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.epics-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.epic-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(128, 0, 0, 0.1);
+    border: 3px solid var(--golden);
+}
+
+.epic-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    color: var(--maroon);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.character-card {
+    background: linear-gradient(135deg, var(--saffron), var(--light-saffron));
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 153, 51, 0.3);
+}
+
+.character-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--maroon);
+}
+
+/* Vishnu Avatars Section */
+.vishnu-avatars {
+    background: linear-gradient(135deg, var(--peacock-blue) 0%, var(--dark-peacock) 100%);
+    color: var(--white);
+}
+
+.vishnu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vishnu-avatar-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.vishnu-avatar-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.vishnu-avatar-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    animation: avatar-float 3s ease-in-out infinite;
+}
+
+@keyframes avatar-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Individual Vishnu Avatar Styles */
+.matsya {
+    background: linear-gradient(135deg, #0277BD, #01579B);
+}
+
+.matsya::after {
+    content: '🐟';
+}
+
+.kurma {
+    background: linear-gradient(135deg, #388E3C, #2E7D32);
+}
+
+.kurma::after {
+    content: '🐢';
+}
+
+.varaha {
+    background: linear-gradient(135deg, #8D6E63, #5D4037);
+}
+
+.varaha::after {
+    content: '🐗';
+}
+
+.narasimha {
+    background: linear-gradient(135deg, #FF8F00, #E65100);
+}
+
+.narasimha::after {
+    content: '🦁';
+}
+
+.vamana {
+    background: linear-gradient(135deg, #FFD54F, #FFC107);
+}
+
+.vamana::after {
+    content: '👦';
+}
+
+.parashurama {
+    background: linear-gradient(135deg, #D32F2F, #B71C1C);
+}
+
+.parashurama::after {
+    content: '⚔️';
+}
+
+.kalki {
+    background: linear-gradient(135deg, #FFFFFF, #E0E0E0);
+}
+
+.kalki::after {
+    content: '🐎';
+}
+
+.buddha {
+    background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.buddha::after {
+    content: '☸️';
+}
+
+/* Durga Section */
+.durga {
+    background: linear-gradient(135deg, var(--maroon) 0%, #B71C1C 100%);
+    color: var(--white);
+}
+
+.durga-content {
+    text-align: center;
+}
+
+.durga-main-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E91E63, #AD1457);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    position: relative;
+    animation: bounce 3s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.durga-main-image::after {
+    content: '🔱';
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.durga-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.durga-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.durga-form:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.durga-form-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+    animation: durga-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes durga-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(233, 30, 99, 0.8), 0 0 30px rgba(233, 30, 99, 0.4);
+    }
+}
+
+.shailputri {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.shailputri::after {
+    content: '🏔️';
+}
+
+.brahmacharini {
+    background: linear-gradient(135deg, #FF9800, #E65100);
+}
+
+.brahmacharini::after {
+    content: '📿';
+}
+
+.chandraghanta {
+    background: linear-gradient(135deg, #2196F3, #0D47A1);
+}
+
+.chandraghanta::after {
+    content: '🌙';
+}
+
+.kushmanda {
+    background: linear-gradient(135deg, #FFC107, #F57F17);
+}
+
+.kushmanda::after {
+    content: '☀️';
+}
+
+.skandamata {
+    background: linear-gradient(135deg, #795548, #5D4037);
+}
+
+.skandamata::after {
+    content: '👶';
+}
+
+.katyayani {
+    background: linear-gradient(135deg, #E91E63, #AD1457);
+}
+
+.katyayani::after {
+    content: '⚔️';
+}
+
+.kalaratri {
+    background: linear-gradient(135deg, #212121, #424242);
+}
+
+.kalaratri::after {
+    content: '🌑';
+}
+
+.mahagauri {
+    background: linear-gradient(135deg, #FFFFFF, #F5F5F5);
+    border: 2px solid var(--golden);
+}
+
+.mahagauri::after {
+    content: '🕊️';
+}
+
+.siddhidatri {
+    background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.siddhidatri::after {
+    content: '🪷';
+}
+
+/* Bhagavad Gita Section */
+.gita {
+    background: linear-gradient(135deg, var(--golden) 0%, #FFC107 100%);
+    color: var(--maroon);
+}
+
+.gita-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gita-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 2rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--maroon), #D32F2F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--golden);
+    position: relative;
+    animation: book-glow 3s ease-in-out infinite;
+}
+
+.gita-image::after {
+    content: '📖';
+}
+
+@keyframes book-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 10px 30px rgba(128, 0, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 15px 40px rgba(128, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+}
+
+.gita-verses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.verse-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--maroon);
+    position: relative;
+}
+
+.verse-card::before {
+    content: '📿';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--saffron);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.verse-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.verse-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.verse-meaning {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Culture Section */
+.culture {
+    background: linear-gradient(135deg, var(--peacock-blue) 0%, var(--dark-peacock) 100%);
+    color: var(--white);
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.culture-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.culture-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Festival Specific Images */
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.festival-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Temple Images */
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.temple-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.temple-card-image {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--golden), var(--saffron));
+}
+
+/* Food Images */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.food-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.food-card-image {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Clothing Images */
+.clothing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.clothing-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.clothing-card-image {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Music & Yoga Images */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.activity-card-image {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(128, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--saffron);
+    box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1);
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: rgba(128, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:not(:placeholder-shown)+label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--saffron);
+    background: var(--white);
+    padding: 0 0.5rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--saffron), var(--golden));
+    color: var(--maroon);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 153, 51, 0.3);
+}
+
+/* Footer */
+footer {
+    background: var(--maroon);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.footer-shloka {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-translation {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .epics-container {
+        grid-template-columns: 1fr;
+    }
+
+    .rotating-deities {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin: 2rem auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .characters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vishnu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .durga-forms {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gita-verses {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Special hover effects for avatar cards */
+.avatar-card:hover .deity-avatar {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.character-card:hover .character-image {
+    transform: scale(1.2);
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Floating elements */
+.floating-diya {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.floating-om {
+    right: 15%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.floating-lotus {
+    left: 20%;
+    bottom: 25%;
+    animation-delay: 4s;
+}
+
+/* Modal Styles */
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+.custom-modal-content {
+  background: #fff;
+  color: #800000;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  max-height: 80vh;           /* Allow modal to grow but not overflow screen */
+  overflow-y: auto;           /* Enable vertical scroll if content is long */
+  white-space: pre-line;
+}
+.custom-modal-close {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 2rem;
+  color: #800000;
+  cursor: pointer;
+}
