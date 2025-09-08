@@ -42,5 +42,4 @@ Contributions are welcome! If you have knowledge, corrections, or resources youâ
 - Inspired by countless teachers, scriptures, and practitioners.
 
 ---
-
 Feel free to explore, learn, and contribute!
